@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-sleeper-pod
+spec:
+  containers:
+    - name: ubuntu-sleeper
+      image: ubuntu-sleeper
+      command: ["sleep2.0"] # entry point in dockerfile
+      args: ["10"] # cmd in Dockerfile
+
+# kubectl create -f pod-definition.yml
+# Dockerfile
+#FROM ubuntu
+
+#ENTRYPOINT ["sleep"]
+#CMD ["5"]
+# docker run --name ubuntu-sleeper --entrypoint sleep2.0 ubuntu-sleeper 10
