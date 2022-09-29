@@ -27,3 +27,6 @@ kubectl replace --force -f /tmp/kubect-edit-12346.yaml
 ```
 kubectl exec ubuntu-sleeper -- whoami
 ```
+```
+kubectl exec -ti my-kubernetes-dashboard ls /var/run/secrets/kubernetes.io/serviceaccount
+```
